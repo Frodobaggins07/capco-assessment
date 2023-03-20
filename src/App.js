@@ -7,7 +7,7 @@ import EditContact from './components/EditContact/EditContact';
  * MockDatabase takes the value of some constant value of the contact manager 
  * made use of the splice() function that changes the contents of an 
  * array by removing or replacing existing elements and/or adding new elements in 
- * its place as used with index and contact.
+ * its place as used with index and contacts
  */
 const MockDatabase = [
   {
