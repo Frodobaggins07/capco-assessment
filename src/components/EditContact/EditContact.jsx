@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
 
+
+/**
+ * Used the useState hook here for the functional operations
+ * the useState takes the initial state value as a arguement and returns
+ * an updated state value when the setter function is called
+ * also made use of the spread syntax(...), which takes the old values from an
+ * object or array and include it in a new array.
+ *
+ */
+
 const EditContact = ({ data, onUpdateContact, onCancel }) => {
   const [state, setState] = useState(data);
 
