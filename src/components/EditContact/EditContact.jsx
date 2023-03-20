@@ -17,21 +17,21 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
     setState({
       ...state,
       [e.target.name]: e.target.value,
-    });
-  };
+    }); // when button is clicked it takes the old value from an object and includes it in the new object
+  }; 
 
   useEffect(() => {
     setState(data);
-  }, [data]);
+  }, [data]); // the useEffect function tells react that your component needs to do something after render.
 
   return (
     <div className="contact-list">
       <div className="contact-edit-header">
       <strong>Edit Contact </strong>
-        <button onClick={onCancel}>Cancel Edit</button>
+        <button onClick={onCancel}>Cancel Edit</button> 
       </div>
 
-      <div className="contact">
+      <div className="contact"> 
         <input
           name="name"
           type="text"

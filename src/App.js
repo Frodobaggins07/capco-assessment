@@ -4,7 +4,7 @@ import ContactList from './components/ContactList/ContactList';
 import AddContact from './components/AddContact/AddContact';
 import EditContact from './components/EditContact/EditContact';
 /**
- * MockDatabase takes the value of some contstant value of the contact manager 
+ * MockDatabase takes the value of some constant value of the contact manager 
  * made use of the splice() function that changes the contents of an 
  * array by removing or replacing existing elements and/or adding new elements in 
  * its place as used with index and contact.
@@ -50,16 +50,18 @@ function App() {
   }
 
   const handleUpdateContact = (contact) => {
-    const index = contacts.findIndex(e => e.id === contact.id)
+    const index = contacts.findIndex(e => e.id === contact.id) // this finds the index or position of the contacts so the splice() 
+    //function can use when updating existing contacts
 
     const data = contacts;
-    data.splice(index, 1, contact)
+    data.splice(index, 1, contact) 
     setContacts([...data])
 
   }
 
   const handleDelete = (contact) => {
-    const index = contacts.findIndex(e => e.id === contact.id)
+    const index = contacts.findIndex(e => e.id === contact.id) // this finds the index or position of the contacts so the splice() 
+    //function can use when deleting
 
     const data = contacts;
     data.splice(index, 1,)

@@ -32,7 +32,7 @@ const ContactList = ({ data, onEdit, onDelete }) => {
                       </div>
                   ))
               ) : (
-                  <div className="contact">No contacts to display</div>
+                  <div className="contact"> <strong>No contacts to display</strong></div>
               )}
           </div></>
   );

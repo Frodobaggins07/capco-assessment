@@ -16,7 +16,8 @@ const AddContact = ({ onAddContact }) => {
     setState({
       ...state,
       [e.target.name]: e.target.value,
-    });
+    }); // when button add is clicked it takes the old value from an object and includes it in the new object
+    
   };
 
   return (
