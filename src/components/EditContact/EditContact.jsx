@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const AddContact = ({ onAddContact }) => {
-  const [state, setState] = useState({
-    name: "",
-    phone: "",
-  });
+const EditContact = ({ data, onUpdateContact, onCancel }) => {
+  const [state, setState] = useState(data);
 
   const handleChange = (e) => {
     setState({
@@ -13,8 +10,17 @@ const AddContact = ({ onAddContact }) => {
     });
   };
 
+  useEffect(() => {
+    setState(data);
+  }, [data]);
+
   return (
     <div className="contact-list">
+      <div className="contact-edit-header">
+      <strong>Edit Contact </strong>
+        <button onClick={onCancel}>Cancel Edit</button>
+      </div>
+
       <div className="contact">
         <input
           name="name"
@@ -30,7 +36,7 @@ const AddContact = ({ onAddContact }) => {
           placeholder="Phone Number"
           onChange={handleChange}
         />
-        <button className="contact-edit" onClick={() => onAddContact(state)}>
+        <button className="contact-edit" onClick={() => onUpdateContact(state)}>
           Add
         </button>
       </div>
@@ -38,4 +44,4 @@ const AddContact = ({ onAddContact }) => {
   );
 };
 
-export default AddContact;
+export default EditContact;

@@ -8,27 +8,30 @@ const MockDatabase = [
   {
     id: 1,
     name: 'John Doe',
-    phone: '+14162345678'
+    phone: '+13456789947'
+   
   },
   {
     id: 2,
-    name: 'Person 2',
-    phone: '+3434543545'
+    name: 'Caroline Smith',
+    phone: '+234434543545'
   },
   {
     id: 3,
-    name: 'Person 3',
-    phone: '+78987978'
+    name: 'Vanessa Morgan',
+    phone: '+44898797893'
   },
   {
     id: 4,
-    name: 'Person 4',
-    phone: '+45435435345'
+    name: 'Tom Gold',
+    phone: '+7785435435345'
   },
 ]
 
 
 function App() {
+
+ 
   const [contacts, setContacts] = useState(MockDatabase);
   const [edit, setEdit] = useState(undefined);
 
