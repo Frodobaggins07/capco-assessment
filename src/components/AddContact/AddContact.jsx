@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+/**
+ * variable AddContact uses the onClick button onAddContact to handle the change
+ * when users click on the add button that adds the new contact into the 
+ * mock database already in place.
+ * 
+ */
 const AddContact = ({ onAddContact }) => {
   const [state, setState] = useState({
     name: "",

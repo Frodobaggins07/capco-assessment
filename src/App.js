@@ -3,7 +3,12 @@ import './App.css';
 import ContactList from './components/ContactList/ContactList';
 import AddContact from './components/AddContact/AddContact';
 import EditContact from './components/EditContact/EditContact';
-
+/**
+ * MockDatabase takes the value of some contstant value of the contact manager 
+ * made use of the splice() function that changes the contents of an 
+ * array by removing or replacing existing elements and/or adding new elements in 
+ * its place as used with index and contact.
+ */
 const MockDatabase = [
   {
     id: 1,
@@ -25,6 +30,11 @@ const MockDatabase = [
     id: 4,
     name: 'Tom Gold',
     phone: '+7785435435345'
+  },
+  {
+    id: 5,
+    name: 'James Gordon',
+    phone: '+18795367290'
   },
 ]
 
