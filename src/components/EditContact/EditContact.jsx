@@ -22,7 +22,7 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
 
   useEffect(() => {
     setState(data);
-  }, [data]); // the useEffect function tells react that your component needs to do something after render.
+  }, [data]); // the useEffect function tells react that your component needs to do something after rendering
 
   return (
     <div className="contact-list">
@@ -41,7 +41,7 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
         />
         <input
           name="phone"
-          type="number"
+          type="text"
           value={state?.phone}
           placeholder="Phone Number"
           onChange={handleChange}

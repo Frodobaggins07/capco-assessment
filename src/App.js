@@ -13,28 +13,33 @@ const MockDatabase = [
   {
     id: 1,
     name: 'John Doe',
-    phone: '+13456789947'
+    phone: '+13456789947',
+    //email: 'johndoe1@outlook.ca'
    
   },
   {
     id: 2,
     name: 'Caroline Smith',
-    phone: '+234434543545'
+    phone: '+234434543545',
+    //email: 'CaroSmith@outlook.ca'
   },
   {
     id: 3,
     name: 'Vanessa Morgan',
-    phone: '+44898797893'
+    phone: '+44898797893',
+    //email: 'VanessaM@icloud.com'
   },
   {
     id: 4,
     name: 'Tom Gold',
-    phone: '+7785435435345'
+    phone: '+7785435435345',
+    //email: 'Tgold890@yahoo.ca'
   },
   {
     id: 5,
     name: 'James Gordon',
-    phone: '+18795367290'
+    phone: '+18795367290',
+    //email: 'jamesGordon@gmail.com'
   },
 ]
 
@@ -69,11 +74,21 @@ function App() {
 
   }
 
+/**
+ * Contact List- takes the onClick buttons as arguement as they are imported into the App.js
+ * it takes values of the contacts, the Onclick button onEdit and the onDelete button and performs all the actions
+ * 
+ * AddContact- takes the onAddContact button and perfoms the function
+ * 
+ * Edit Contact- this edit an already existing contact in the database and updates the information. and takes the cancel 
+ * edit button if user decides not to update
+ */
 
   return (
-    <div className="App">
+    
+    <div className="App"> 
       <div className='container'>
-        <ContactList data={contacts} onEdit={setEdit} onDelete={handleDelete} />
+        <ContactList data={contacts} onEdit={setEdit} onDelete={handleDelete} /> 
         {!edit ? (
           <AddContact onAddContact={handleNewContact} />
         ) : (

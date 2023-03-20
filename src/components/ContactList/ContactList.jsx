@@ -10,19 +10,18 @@ import React from "react";
 
 const ContactList = ({ data, onEdit, onDelete }) => {
   return (
-    <><div>
-          <nav className=" navbar navbar-dark bg-dark navbar-expand-sm">
-              <div className="directory">
-                  <h1>Contact Manager</h1>
-              </div>
-          </nav>
+   
+              <><div className="directory">
+          <h1>Contact Manager</h1>
       </div><div className="contact-list">
-              {data !== undefined && data?.length > 0 ? (
+              {data !== undefined && data.length > 0 ? (
                   data.map((contact, index) => (
                       <div className="contact" key={index}>
                           <div className="contact-num">#{index + 1}.</div>
+
                           <div>{contact.name}</div>
                           <div>{contact.phone}</div>
+                          <div>{contact.email}</div>
                           <button className="contact-edit" onClick={() => onEdit(contact)}>
                               Edit
                           </button>
