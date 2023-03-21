@@ -33,7 +33,7 @@ const AddContact = ({ onAddContact }) => {
         />
         <input
           name="phone"
-          type="number"
+          type="text"
           value={state?.phone}
           placeholder="Phone Number"
           onChange={handleChange}  // Handle change is the const variable that performs the add after user clicks input into the 
