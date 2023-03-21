@@ -41,7 +41,7 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
         />
         <input
           name="phone"
-          type="text"
+          type="number"
           value={state?.phone}
           placeholder="Phone Number"
           onChange={handleChange}  // This is the const Variable that handles the change in data inputted by users.
