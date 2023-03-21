@@ -6,17 +6,16 @@ import React, { useState } from "react";
  * mock database already in place.
  * 
  */
+
 const AddContact = ({ onAddContact }) => {
   const [state, setState] = useState({
     name: "",
     phone: "",
+    //email:""
   });
 
   const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    }); // when button add is clicked it takes the old value from an object and includes it in the new object
+    setState({...state,[e.target.name]: e.target.value,}); // when button add is clicked it takes the current value from an object and includes it in the new object
     
   };
 
@@ -27,17 +26,33 @@ const AddContact = ({ onAddContact }) => {
           name="name"
           type="text"
           value={state?.name}
-          placeholder="Name"
+          placeholder="Full Name"
           onChange={handleChange}
         />
         <input
           name="phone"
-          type="number"
+          type="text"
           value={state?.phone}
           placeholder="Phone Number"
           onChange={handleChange}
         />
-        <button className="contact-edit" onClick={() => onAddContact(state)}>
+        {/* <input
+          name="email"
+          type="text"
+          value={state?.email}
+          placeholder="Email Address"
+          onChange={handleChange}
+        /> */}
+        <button
+          className="contact-edit"
+          onClick={() => {
+            onAddContact(state);
+            setState({
+              name: "",
+              phone: "",
+            });
+          }}
+        >
           Add
         </button>
       </div>
