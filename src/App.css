@@ -4,7 +4,7 @@
   background-color:rgb(232, 250, 215);
 }
 .container {
-  display: flex;
+  display:inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

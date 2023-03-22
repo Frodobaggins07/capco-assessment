@@ -26,6 +26,7 @@ const AddContact = ({ onAddContact }) => {
   return (
     <div className="contact-list">
       <div className="contact">
+        
         <input
           name="name"
           type="text"
