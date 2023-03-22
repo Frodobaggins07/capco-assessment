@@ -16,7 +16,8 @@ const AddContact = ({ onAddContact }) => {
 
   const handleChange = (e) => {
     setState({...state,[e.target.name]: e.target.value,}); 
-    // when button add is clicked it takes the current value from an object and includes it in the new object
+    // when button add is clicked it takes the current value from an object and includes it in the new object so it takes
+    // the all the values from the Mockdabase and includes the new inputs by the user.
     
   };
 

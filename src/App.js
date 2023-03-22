@@ -3,6 +3,7 @@ import './App.css';
 import ContactList from './components/ContactList/ContactList';
 import AddContact from './components/AddContact/AddContact';
 import EditContact from './components/EditContact/EditContact';
+import Caption from './Caption'
 /**
  * MockDatabase takes the value of some constant value of the contact manager 
  * made use of the splice() function that changes the contents of an 
@@ -86,7 +87,10 @@ function App() {
 
   return (
     
+    
     <div className="App"> 
+    <nav className='nav'>
+      <button className="btn-success"><h1>Homepage</h1></button>
       <div className='container'>
         <ContactList data={contacts} onEdit={setEdit} onDelete={handleDelete} /> 
         {!edit ? (
@@ -96,6 +100,8 @@ function App() {
         )
         }
       </div>
+      </nav>
+      <Caption />
     </div>
   );
 }
