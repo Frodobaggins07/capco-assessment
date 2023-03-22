@@ -22,7 +22,8 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
 
   useEffect(() => {
     setState(data);
-  }, [data]); // the useEffect function tells react that your component needs to do something after rendering
+  }, [data]); // the useEffect function tells react that your component needs to do something after rendering it nvokes 
+  //this function to run as side-effect after every render cycle based on values being tracked for changes given by the arguement data.
 
   return (
     <div className="contact-list">

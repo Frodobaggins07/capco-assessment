@@ -3,7 +3,9 @@ import React, { useState } from "react";
 /**
  * variable AddContact uses the onClick button onAddContact to handle the change
  * when users click on the add button that adds the new contact into the 
- * mock database contacts already in place.
+ * mock database contacts already in place. Also made use of the spread operator
+ * here that takes all the current value and adds it with the new value the user 
+ * types in
  * 
  */
 
