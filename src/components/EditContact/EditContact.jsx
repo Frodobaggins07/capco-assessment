@@ -20,9 +20,9 @@ const EditContact = ({ data, onUpdateContact, onCancel }) => {
     }); // when button is clicked it takes the current value from an object and includes it in the new object
   }; 
 
-  // useEffect(() => {
-  //   setState(data);
-  // }, [data]); // the useEffect function tells react that your component needs to do something after rendering
+  useEffect(() => {
+    setState(data);
+  }, [data]); // the useEffect function tells react that your component needs to do something after rendering
 
   return (
     <div className="contact-list">

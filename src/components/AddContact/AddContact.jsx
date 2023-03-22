@@ -3,7 +3,7 @@ import React, { useState } from "react";
 /**
  * variable AddContact uses the onClick button onAddContact to handle the change
  * when users click on the add button that adds the new contact into the 
- * mock database already in place.
+ * mock database contacts already in place.
  * 
  */
 
@@ -34,7 +34,7 @@ const AddContact = ({ onAddContact }) => {
         />
         <input
           name="phone"
-          type="text"
+          type="number"
           value={state?.phone}
           placeholder="Phone Number"
           onChange={handleChange}  // Handle change is the const variable that performs the add after user clicks input into the 
