@@ -56,7 +56,9 @@ function App() {
   }
 
   const handleUpdateContact = (contact) => {
-    const index = contacts.findIndex(e => e.id === contact.id) // this finds the index or position of the contacts so the splice() 
+    console.log(contact);
+    const index = contacts.findIndex(e => e.id === contact.id) 
+    // this finds the index or position of the contacts so the splice() 
     //function can use when updating existing contacts
 
     const data = contacts;

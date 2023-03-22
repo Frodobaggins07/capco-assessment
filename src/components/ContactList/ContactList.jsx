@@ -17,7 +17,7 @@ const ContactList = ({ data, onEdit, onDelete }) => {
               {data !== undefined && data.length > 0 ? (
                   data.map((contact, index) => (
                       <div className="contact" key={index}>
-                          <div className="contact-num">#{index + 1}.</div>
+                          <div className="contact-num">#{contact.id}.</div>
 
                           <div>{contact.name}</div>
                           <div>{contact.phone}</div>
